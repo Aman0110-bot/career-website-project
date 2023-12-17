@@ -10,17 +10,28 @@
             height: 360px;
             width: 100%;
             object-fit: cover;
+            margin-bottom: 16px;
         }
     </style>
     
 </head>
 <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid w-100" id="banner" src="http://127.0.0.1:5000/static/banner.avif" >
+        
     <div class="container">
-        <h1 class="text-center mt-2 mb-4">Tech-key Careers </h1>
-        <img class="img-fluid w-100" id="banner" src="http://127.0.0.1:5000/static/banner.avif" >
-        <h2 class="text-center mt-2 mb-4">About Tech-key</h2>
-        <p class="lead" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas. Semper eget duis at tellus at. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Cursus sit amet dictum sit amet. Placerat in egestas erat imperdiet. Id nibh tortor id aliquet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Sit amet est placerat in egestas erat imperdiet. Dignissim diam quis enim lobortis scelerisque fermentum dui. Quisque egestas diam in arcu cursus euismod quis viverra nibh.</p>
-        </p> 
+        <h1 class="text-center mt-2 mb-4">{{company_name}} Careers </h1>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6"
+            <p class="lead" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas. Semper eget duis at tellus at. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Cursus sit amet dictum sit amet. Placerat in egestas erat imperdiet. Id nibh tortor id aliquet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Sit amet est placerat in egestas erat imperdiet. Dignissim diam quis enim lobortis scelerisque fermentum dui. Quisque egestas diam in arcu cursus euismod quis viverra nibh.</p>
+            </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+            <img src="/static/people.jpg" style="height:320px; border-radius: 4px;"  > 
+        </div>
+
+        </div>
+        
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
         <div>
             {% for job in jobs %}
@@ -29,11 +40,11 @@
 
         </div>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4">Copyright 2023,Teck-Key</p>
+            <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
+            <!--<p class="mt-4">Copyright 2023,Teck-Key</p>-->
         </div>
         
     </div>
-
+    {% include 'footer.html' %}
 </body>
     </html>
